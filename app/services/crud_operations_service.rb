@@ -7,7 +7,7 @@ class CrudOperationsService
 
   def initialize(model, params = {})
     @model = model
-    @params = valid_params? ? params : ActionController::Parameters.new(params)
+    @params = params.is_a?(Hash) ? ActionController::Parameters.new(params) : params
   end
 
   def index
