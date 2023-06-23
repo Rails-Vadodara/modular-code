@@ -7,7 +7,7 @@ class CrudOperationsService
 
   def initialize(model, params = {})
     @model = model
-    @params = params
+    @params = valid_params? ? params : ActionController::Parameters.new(params)
   end
 
   def index
