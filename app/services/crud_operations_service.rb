@@ -16,12 +16,14 @@ class CrudOperationsService
 
   def create
     instance_variable_get("@#{model.to_s.downcase}").save
+    instance_variable_get("@#{model.to_s.downcase}")
   rescue ActionController::ParameterMissing => e
     e
   end
 
   def update
     instance_variable_get("@#{model.to_s.downcase}").update(permitted_params)
+    instance_variable_get("@#{model.to_s.downcase}")
   rescue ActionController::ParameterMissing => e
     e
   end
@@ -40,6 +42,7 @@ class CrudOperationsService
 
   def destroy
     instance_variable_get("@#{model.to_s.downcase}").destroy
+    instance_variable_get("@#{model.to_s.downcase}")
   rescue StandardError => e
     e
   end

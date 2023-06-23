@@ -1,0 +1,5 @@
+action_redirection:
+  users:
+    create: show
+    update: show
+    destroy: index
