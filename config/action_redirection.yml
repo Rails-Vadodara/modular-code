@@ -3,3 +3,6 @@ action_redirection:
     create: show
     update: show
     destroy: index
+    fallbacks:
+      create: new
+      update: edit
