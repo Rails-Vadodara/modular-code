@@ -1,8 +1,18 @@
 action_redirection:
   users:
-    create: show
-    update: show
-    destroy: index
-    fallbacks:
-      create: new
-      update: edit
+    html:
+      create: show
+      update: show
+      destroy: index
+      fallbacks:
+        create: new
+        update: edit
+    turbo_stream:
+      create: show
+      update: show
+      destroy: index
+      fallbacks:
+        create: new
+        update: edit
+        destroy: index
+
